@@ -37,7 +37,7 @@ def profile(username): pass
 def payment():
     return render_template('payment.html')
 
-@app.route('/accounts/<id>')
+@app.route('/account/')
 def accounts():
     return 'See Accounts Here'
 
