@@ -2,7 +2,55 @@
 
 <!-- Begin our Content -->
 {% block content -%}
+<form method="get" action="/deposit/<id>" style="padding:10px;">
+  <fieldset>
+    <legend>Get All Deposits</legend>
+    <label>Enter Deposit ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
 
+<form method="get" action="/deposit/<id>" style="padding:10px;">
+  <fieldset>
+    <legend>Get Deposit By ID</legend>
+    <label>Enter Deposit ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+
+<form method="post" action="/deposit/<id>" style="padding:10px;">
+  <fieldset>
+    <legend>Create a Deposit</legend>
+    <label>Enter Deposit ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+
+<form method="put" action="/deposit/<id>" style="padding:10px;">
+  <fieldset>
+    <legend>Update an Existing Deposit</legend>
+    <label>Enter Deposit ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+
+<form method="delete" action="/deposit/<id>" style="padding:10px;">
+  <fieldset>
+    <legend>Delete a Deposit</legend>
+    <label>Enter Deposit ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
 
 {%- endblock content %}
 

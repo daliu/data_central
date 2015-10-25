@@ -2,7 +2,55 @@
 
 <!-- Begin our Content -->
 {% block content -%}
+<form method="get" action="/customer/<id>" style="padding:10px;">
+  <fieldset>
+    <legend>Get All customers</legend>
+    <label>Enter customer ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
 
+<form method="get" action="/customer/<id>" style="padding:10px;">
+  <fieldset>
+    <legend>Get customer By ID</legend>
+    <label>Enter customer ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+
+<form method="post" action="/customer/<id>" style="padding:10px;">
+  <fieldset>
+    <legend>Create a customer</legend>
+    <label>Enter customer ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+
+<form method="put" action="/customer/<id>" style="padding:10px;">
+  <fieldset>
+    <legend>Update an Existing customer</legend>
+    <label>Enter customer ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+
+<form method="delete" action="/customer/<id>" style="padding:10px;">
+  <fieldset>
+    <legend>Delete a customer</legend>
+    <label>Enter customer ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
 
 {%- endblock content %}
 

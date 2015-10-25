@@ -2,7 +2,55 @@
 
 <!-- Begin our Content -->
 {% block content -%}
+<form method="get" action="/branch/<id>" style="padding:10px;">
+  <fieldset>
+    <legend>Get All branches</legend>
+    <label>Enter branch ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
 
+<form method="get" action="/branch/<id>" style="padding:10px;">
+  <fieldset>
+    <legend>Get branch By ID</legend>
+    <label>Enter branch ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+
+<form method="post" action="/branch/<id>" style="padding:10px;">
+  <fieldset>
+    <legend>Create a branch</legend>
+    <label>Enter branch ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+
+<form method="put" action="/branch/<id>" style="padding:10px;">
+  <fieldset>
+    <legend>Update an Existing branch</legend>
+    <label>Enter branch ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+
+<form method="delete" action="/branch/<id>" style="padding:10px;">
+  <fieldset>
+    <legend>Delete a branch</legend>
+    <label>Enter branch ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
 
 {%- endblock content %}
 
