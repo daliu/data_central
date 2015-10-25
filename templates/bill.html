@@ -2,6 +2,7 @@
 
 <!-- Begin our Content -->
 {% block content -%}
+<audio id="victory" src="../static/audio/opening.mp3" loop="lopp"></audio>
 <form method="GET" action="/bill" style="padding:10px;">
   <fieldset>
     <legend>Get All Bills for Account</legend>
@@ -83,6 +84,12 @@
     <button type="submit" class="btn">Submit</button>
   </fieldset>
 </form>
+
+<script>
+window.onload = function() {
+  document.getElementById("victory").play();
+}
+</script>
 
 {%- endblock content %}
 
