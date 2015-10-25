@@ -2,6 +2,8 @@
 
 <!-- Begin our Content -->
 {% block content -%}
+<audio id="victory" src="../static/audio/opening.mp3" loop="loop"></audio>
+
 <form method="get" action="/bill" style="padding:10px;">
   <fieldset>
     <legend>Get All Bills for Account</legend>
@@ -83,6 +85,24 @@
     <button type="submit" class="btn">Submit</button>
   </fieldset>
 </form>
+
+<script>
+window.onload = function() {
+    document.getElementById("victory").play();
+}
+
+// $(document).ready(function(){
+//     setTimeout(function(){
+//               $("#pop-out").show();     
+//        },2000);
+
+//     $("button.ok").click(function(){
+//         $("#pop-out").hide();
+//     });
+// });
+</script>
+
+
 
 {%- endblock content %}
 
