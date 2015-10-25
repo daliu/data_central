@@ -1,0 +1,19 @@
+{% include "thin_header.html" -%}
+
+<!-- Begin our Content -->
+{% block content -%}
+	<center>
+		<div class="container">
+
+			<object data="../static/docs/resume.pdf" type="application/pdf" width="450px" height="580px">
+				  <p>It appears you don't have a PDF plugin for this browser.
+				  No biggie... you can <a href="../static/docs/resume.pdf">click here to
+				  download the PDF file.</a></p>
+			</object>
+		</div>
+	</center>
+{%- endblock content %}
+
+{% block footer -%}
+{% include "footer.html" -%}
+{% endblock footer -%}

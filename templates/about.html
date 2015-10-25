@@ -1,0 +1,38 @@
+{% include "header.html" -%}
+
+<!-- Begin our Content -->
+{% block content -%}
+
+<div class="container" style="text-align:center;background-size:100% 50%;color:#686868;width:100%;">
+	<div style="paddding:10px;">
+		<h1>About Me</h1>
+		<p style="font-size:20px;"><i>TL;DR - I love data science, learning, and giving back to society.</i></p>
+		<div class="" style="text-align:center;">
+	
+			<img src="/static/images/programmer_dave.jpg" alt="programmer" style="border-radius:150px 150px 150px 150px;position:relative;padding-left:75px;" height="350px;" width="350px;"/>
+			<div class="container" style="text-align:right;padding-right:30px;">
+				<h1>As a Programmer</h1>
+				<p>I first fell in love with data science when I learned that the world could be visulaized through statistics. Though often incomplete and wildly wrong if not careful, I still managed to be swept off my feet by the patterns and trends we've discovered about ourselves. Seasonal and cyclical correlations, sentiment association with text length or geographical locations, redefining our identities as humans! Some might pessimistically say that we're reducing ourselves to numbers, but they fail to see how vast that field of numbers remains. Even with our technological advances we continue to need tremendous strength from algorithmic analysis to teach both algorithim and programmer the deepest secrets in plain sight. Data sciences are a mine of not just opportunity, but of beauty, and the humbling opportunity to make a little more sense of our lives.</p>
+			</div>
+	
+			<img src="/static/images/student_dave.jpg" alt="student" style="border-radius:15px 150px 15px 150px;position:relative;" height="300px;" width="450px;"/>
+			<div class="container" style="text-align:right;padding-right:30px;">
+				<h1>As a Student</h1>
+				<p>I've trudged through the bueracracy of America's educational system to find myself in UC Berkeley, holding a strong distaste for the limits and expenses of education in America (especially the latter!). Poring over research on human congnition and social influences, I've developed a faith in humans- that they are near equally capable of achieving intellectual success and the same merits glorified by society. When I discovered Sal Khan and Khanacademy, I was further inspired. Here, a man and a vision infectiously build a system to overturn traditional education. A free, world-class education for all, with a pretense- for as Steve Wozniak once said, "Free as in free speech, not free as in free beer." </p>
+			</div>
+	
+			<img src="/static/images/society_dave.jpg" alt="society_dave" style="border-radius:150px 15px 150px 15px;position:relative;" height="300px;" width="450px;"/>
+			<div class="container" style="text-align:right;padding-right:30px;">
+				<h1>As a Member of Society</h1>
+				<p>Neither hedonist nor ascetic, I find the most fulfilling actions in my life are when I giving back in a significant manner. This ties into my passion for data science, for with knowledge comes power and so I hope to make craters with my skills, whether through discovery or invention.</p>
+			</div>
+		</div>
+	</div>
+<!-- End AlternatingContainers -->
+
+</div>
+{%- endblock content %}
+
+{% block footer -%}
+{% include "footer.html" -%}
+{% endblock footer -%}

@@ -1,0 +1,21 @@
+{% include "header.html" -%}
+
+<!-- Begin our Content -->
+{% block content -%}
+<form method="post" action="/" style="padding:10px;">
+  <fieldset>
+    <legend>Make a Payment!</legend>
+    <label>Enter API Key: &nbsp;</label>
+    <input type="text" placeholder="API Key">
+    <span class="help-block">Example block-level help text here.</span>
+    <label class="checkbox">
+      <input type="checkbox"> Check me out
+    </label>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+{%- endblock content %}
+
+{% block footer -%}
+{% include "footer.html" -%}
+{% endblock footer -%}
