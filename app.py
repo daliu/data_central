@@ -12,15 +12,50 @@ def home():
 def account():
     return render_template('account.html')
 
-@app.route('/bill', methods=['GET', 'POST', 'PUT', 'delete'])
+@app.route('/bill', methods=['GET', 'POST', 'PUT', 'DELETE'])
 def bill():
-    if request.method == 'delete':
+    if request.method == 'DELETE':
         bill_id = request.form['bill_id']
-        r = requests.delete("http://api.reimaginebanking.com/accounts/delete", data = {'id' : bill_id})
+        r = requests.delete("http://api.reimaginebanking.com/accounts/delete", data = {'billId' : bill_id})
         r = r.json()
         print(r.text)
-        return redirect('/bill')
-    return render_template('bill.html')
+        return redirect('/')
+    elif request.method == 'PUT':
+        bill_id = request.form['bill_id']
+        payee = request.form['payee']
+        nickname = request.form['nickname']
+        payment_date = request.form['payment_date']
+        reocurring = request.form['reocurring']
+        amount = request.form['amount']
+        r = requests.put("http://api.reimaginebanking.com/accounts/put", data = {"status": "pending", "payee": payee, "nickname": nickname, "payment_date": "2015-10-25", "recurring_date": reocurring, "payment_amount": amount })
+        r = r.json()
+        return redirect('/')
+    elif request.method == 'POST':
+        bill_id = request.form['bill_id']
+        payee = request.form['payee']
+        nickname = request.form['nickname']
+        payment_date = request.form['payment_date']
+        reocurring = request.form['reocurring']
+        amount = request.form['amount']
+        r = requests.post("http://api.reimaginebanking.com/accounts/post", data = {"billId": bill_id, "status": "pending", "payee": payee, "nickname": nickname, "payment_date": "2015-10-25", "recurring_date": reocurring, "payment_amount": amount })
+        r = r.json()
+        return redirect('/')
+    elif request.method == 'GET':
+        account_id = request.form['account_id']
+        bill_id = request.form['bill_id']
+        customer_id = request.form['customer_id']
+        get_id = 0
+        id_name = "id"
+        if account_id:
+            get_id = account_id
+        elif bill_id:
+            id_name = "billId"
+            get_id = bill_id
+        elif customer_id:
+            get_id = customer_id
+        r = requests.get("http://api.reimaginebanking.com/accounts/get", data = {id_name : get_id})
+        return redirect('/')
+    print("damn it.")
 
 @app.route('/branch')
 def branch():
