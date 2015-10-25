@@ -2,44 +2,47 @@ import requests
 from flask import Flask, url_for, request, render_template, send_file
 app = Flask(__name__)
 
+api_key = 'e7bff3ff405d7b4e32cc80be8a8f1d37'
+
 @app.route('/')
 def home():
 	return render_template('homepage.html')
 
-@app.route('/login', methods=['POST', 'GET'])
-def login():
-    error = None
-    if request.method == 'POST':
-        if valid_login(request.form['username'],
-                       request.form['password']):
-            return log_the_user_in(request.form['username'])
-        else:
-            error = 'Invalid username/password'
-    # the code below is executed if the request method
-    # was GET or the credentials were invalid
-    return render_template('login.html', error=error)
+@app.route('/account')
+def account():
+    return render_template('account.html')
 
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    form = RegistrationForm(request.form)
-    if request.method == 'POST' and form.validate():
-        user = User(form.username.data, form.email.data,
-                    form.password.data)
-        db_session.add(user)
-        flash('Thanks for registering')
-        return redirect(url_for('login'))
-    return render_template('register.html', form=form)
+@app.route('/bill')
+def bill():
+    return render_template('bill.html')
 
-@app.route('/user/<username>')
-def profile(username): pass
+@app.route('/branch')
+def branch():
+    return render_template('branch.html')
+
+@app.route('/customer')
+def customer():
+    return render_template('customer.html')
+
+@app.route('/deposit')
+def deposit():
+    return render_template('deposit.html')
+
+@app.route('/merchant')
+def merchant():
+    return render_template('merchant.html')
 
 @app.route('/payment')
 def payment():
     return render_template('payment.html')
 
-@app.route('/account/')
-def accounts():
-    return 'See Accounts Here'
+@app.route('/purchase')
+def purchase():
+    return render_template('purchase.html')
+
+@app.route('/withdrawl')
+def withdrawl():
+    return render_template('withdrawl.html')
 
 @app.route('/pokemon')
 def pokemon():
