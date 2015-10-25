@@ -1,4 +1,4 @@
-import requests
+import requests, json
 from flask import Flask, url_for, request, render_template, send_file
 app = Flask(__name__)
 
@@ -12,8 +12,14 @@ def home():
 def account():
     return render_template('account.html')
 
-@app.route('/bill')
+@app.route('/bill', methods=['GET', 'POST', 'PUT', 'delete'])
 def bill():
+    if request.method == 'delete':
+        bill_id = request.form['bill_id']
+        r = requests.delete("http://api.reimaginebanking.com/accounts/delete", data = {'id' : bill_id})
+        r = r.json()
+        print(r.text)
+        return redirect('/bill')
     return render_template('bill.html')
 
 @app.route('/branch')
@@ -32,17 +38,13 @@ def deposit():
 def merchant():
     return render_template('merchant.html')
 
-@app.route('/payment')
-def payment():
-    return render_template('payment.html')
-
 @app.route('/purchase')
 def purchase():
     return render_template('purchase.html')
 
-@app.route('/withdrawl')
-def withdrawl():
-    return render_template('withdrawl.html')
+@app.route('/withdrawal')
+def withdrawal():
+    return render_template('withdrawal.html')
 
 @app.route('/pokemon')
 def pokemon():

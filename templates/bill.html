@@ -2,7 +2,87 @@
 
 <!-- Begin our Content -->
 {% block content -%}
+<form method="get" action="" style="padding:10px;">
+  <fieldset>
+    <legend>Get All Bills for Account</legend>
+    <label>Account ID: &nbsp;</label>
+    <input id="id" type="text" placeholder="Account ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
 
+<form method="get" action="" style="padding:10px;">
+  <fieldset>
+    <legend>Get Bill By Bill ID</legend>
+    <label>Bill ID: &nbsp;</label>
+    <input id="bill_id" type="text" placeholder="Bill ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+
+<form method="get" action="" style="padding:10px;">
+  <fieldset>
+    <legend>Get Bills By Customer ID</legend>
+    <label>Customer ID: &nbsp;</label>
+    <input id="customer_id" type="text" placeholder="Customer ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+
+<form method="post" action="" style="padding:10px;">
+  <fieldset>
+    <legend>Create a Bill</legend>
+    <label>Bill ID: &nbsp;</label>
+    	<input id="id" type="text" placeholder="Account ID">
+    <label>Payee: &nbsp;</label>
+    	<input id="payee" type="text" placeholder="Payee">
+    <label>Nickname: &nbsp;</label>
+    	<input id="nickname" type="text" placeholder="Nickname">
+    <label>Payment Date: &nbsp;</label>
+    	<input id="Payment Date" type="text" placeholder="Payment Date">
+    <div class="checkbox">
+    	<label><input id="reoccuring" type="checkbox">Recurring Date?</label>
+	</div>
+	<label>Payment Amount: &nbsp;</label>
+    	<input id="amount" type="text" placeholder="$">
+
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+
+<form method="put" action="" style="padding:10px;">
+  <fieldset>
+    <legend>Update an Existing Bill</legend>
+     <label>Bill ID: &nbsp;</label>
+    	<input id="bill_id" type="text" placeholder="Bill ID">
+    <label>Payee: &nbsp;</label>
+    	<input id="payee" type="text" placeholder="Payee">
+    <label>Nickname: &nbsp;</label>
+    	<input id="nickname" type="text" placeholder="Nickname">
+    <label>Payment Date: &nbsp;</label>
+    	<input id="Payment Date" type="text" placeholder="Payment Date">
+    <div class="checkbox">
+    	<label><input id="reoccuring" type="checkbox">Recurring Date?</label>
+	</div>
+	<label>Payment Amount: &nbsp;</label>
+    	<input id="amount" type="text" placeholder="$">
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+
+<form method="delete" action="" style="padding:10px;">
+  <fieldset>
+    <legend>Delete a Bill</legend>
+    <label>Bill ID: &nbsp;</label>
+    <input id="bill_id" type="text" placeholder="Bill ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
 
 {%- endblock content %}
 
