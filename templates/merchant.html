@@ -2,7 +2,55 @@
 
 <!-- Begin our Content -->
 {% block content -%}
+<form method="get" action="/merchant" style="padding:10px;">
+  <fieldset>
+    <legend>Get All Merchants</legend>
+    <label>Enter Merchant ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
 
+<form method="get" action="/merchant" style="padding:10px;">
+  <fieldset>
+    <legend>Get Merchant By ID</legend>
+    <label>Enter Merchant ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+
+<form method="post" action="/merchant" style="padding:10px;">
+  <fieldset>
+    <legend>Create a Merchant</legend>
+    <label>Enter Merchant ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+
+<form method="put" action="/merchant" style="padding:10px;">
+  <fieldset>
+    <legend>Update an Existing Merchant</legend>
+    <label>Enter Merchant ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+
+<form method="delete" action="/merchant" style="padding:10px;">
+  <fieldset>
+    <legend>Delete a Merchant</legend>
+    <label>Enter Merchant ID: &nbsp;</label>
+    <input type="text" placeholder="Enter ID">
+    <span class="help-block"></span>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
 
 {%- endblock content %}
 
