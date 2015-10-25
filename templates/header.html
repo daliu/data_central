@@ -8,7 +8,13 @@
 	    <script src="{{ url_for('static', filename='./js/jquery.min.js') }}"></script>
   		<script src="{{ url_for('static', filename='./js/bootstrap.min.js') }}"></script>
   		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	    <title>{% block title %} - Dave Liu - {% endblock %}</title>
+	    <title>{% block title %} - Pokemon Payments - {% endblock %}</title>
+	    <script language="javascript" type="text/javascript">
+		function playSound(soundfile) {
+		  document.getElementById("pokemonbg").innerHTML=
+		    "<embed src=\""..\static\audio\victory.wav"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+		}
+		</script>
 		{% endblock %}
 	</head>
 

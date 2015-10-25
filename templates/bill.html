@@ -2,14 +2,29 @@
 
 <!-- Begin our Content -->
 {% block content -%}
-<audio id="victory" src="../static/audio/opening.mp3" loop="lopp"></audio>
-<form method="GET" action="/bill" style="padding:10px;">
+<audio id="opening" src="../static/audio/opening.mp3" loop="loop"></audio>
+<audio id="embed" src="../static/audio/victory.wav"></audio>
+
+<script language="javascript">
+window.onload = function() {
+  document.getElementById("opening").play();
+}
+function victory() {
+   document.getElementById("embed").play();
+   return true;
+}
+$(document).ready(function() {
+    $('victory').hover(EvalSound('embed'));
+});
+</script>
+
+<form method="get" action="/bill" style="padding:10px;">
   <fieldset>
     <legend>Get All Bills for Account</legend>
     <label>Account ID: &nbsp;</label>
     <input id="account_id" type="text" placeholder="Account ID">
     <span class="help-block"></span>
-    <button type="submit" class="btn">Submit</button>
+    <button onmouseover="victory()" type="submit" id="embed" class="btn">Submit</button>
   </fieldset>
 </form>
 
@@ -19,7 +34,7 @@
     <label>Bill ID: &nbsp;</label>
     <input id="bill_id" type="text" placeholder="Bill ID">
     <span class="help-block"></span>
-    <button type="submit" class="btn">Submit</button>
+    <button onmouseover="victory()" type="submit" id="embed" class="btn">Submit</button>
   </fieldset>
 </form>
 
@@ -29,7 +44,7 @@
     <label>Customer ID: &nbsp;</label>
     <input id="customer_id" type="text" placeholder="Customer ID">
     <span class="help-block"></span>
-    <button type="submit" class="btn">Submit</button>
+    <button onmouseover="victory()" type="submit" id="embed" class="btn">Submit</button>
   </fieldset>
 </form>
 
@@ -37,7 +52,7 @@
   <fieldset>
     <legend>Create a Bill</legend>
     <label>Bill ID: &nbsp;</label>
-    	<input id="id" type="text" placeholder="Account ID">
+    	<input id="bill_id" type="text" placeholder="Account ID">
     <label>Payee: &nbsp;</label>
     	<input id="payee" type="text" placeholder="Payee">
     <label>Nickname: &nbsp;</label>
@@ -51,7 +66,7 @@
     	<input id="amount" type="text" placeholder="$">
 
     <span class="help-block"></span>
-    <button type="submit" class="btn">Submit</button>
+    <button onmouseover="victory()" type="submit" id="embed" class="btn">Submit</button>
   </fieldset>
 </form>
 
@@ -71,7 +86,7 @@
 	</div>
 	<label>Payment Amount: &nbsp;</label>
     	<input id="amount" type="text" placeholder="$">
-    <button type="submit" class="btn">Submit</button>
+    <button onmouseover="victory()" type="submit" id="embed" class="btn">Submit</button>
   </fieldset>
 </form>
 
@@ -81,15 +96,9 @@
     <label>Bill ID: &nbsp;</label>
     <input id="bill_id" type="text" placeholder="Bill ID">
     <span class="help-block"></span>
-    <button type="submit" class="btn">Submit</button>
+    <button onmouseover="victory()" type="submit" id="embed" class="btn">Submit</button>
   </fieldset>
 </form>
-
-<script>
-window.onload = function() {
-  document.getElementById("victory").play();
-}
-</script>
 
 {%- endblock content %}
 

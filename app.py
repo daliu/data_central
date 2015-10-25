@@ -41,22 +41,22 @@ def bill():
         r = r.json()
         return redirect(url_for('/'))
     else:
-        if len(request.form) < 1:
-            return render_template('bill.html')
-        account_id = request.form['account_id']
-        bill_id = request.form['bill_id']
-        customer_id = request.form['customer_id']
-        get_id = 0
-        id_name = "id"
-        if account_id != 0:
-            get_id = account_id
-        elif bill_id != 0:
-            id_name = "billId"
-            get_id = bill_id
-        elif customer_id != None:
-            get_id = customer_id
-        if (get_id and check_filled):
-            r = requests.get("http://api.reimaginebanking.com/accounts/get", data = {id_name : get_id})
+        # if len(request.form) < 1:
+        #     return render_template('bill.html')
+        # account_id = request.form['account_id']
+        # bill_id = request.form['bill_id']
+        # customer_id = request.form['customer_id']
+        # get_id = 0
+        # id_name = "id"
+        # if account_id != 0:
+        #     get_id = account_id
+        # elif bill_id != 0:
+        #     id_name = "billId"
+        #     get_id = bill_id
+        # elif customer_id != None:
+        #     get_id = customer_id
+        # if (get_id and check_filled):
+        #     r = requests.get("http://api.reimaginebanking.com/accounts/get", data = {id_name : get_id})
         return render_template('bill.html')
 
 @app.route('/branch')
