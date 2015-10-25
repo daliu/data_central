@@ -2,7 +2,7 @@
 
 <!-- Begin our Content -->
 {% block content -%}
-<audio id="opening" src="../static/audio/opening.mp3" loop="loop"></audio>
+<audio id="opening" src="../static/audio/opening.mp3" volume=50></audio>
 <audio id="embed" src="../static/audio/victory.wav"></audio>
 
 <script language="javascript">
@@ -13,9 +13,9 @@ function victory() {
    document.getElementById("embed").play();
    return true;
 }
-$(document).ready(function() {
-    $('victory').hover(EvalSound('embed'));
-});
+// $(document).ready(function() {
+//     $('victory').hover(EvalSound('embed'));
+// });
 </script>
 
 <form method="get" action="/bill" style="padding:10px;">
